@@ -2,7 +2,7 @@ DiscordPHP
 ====
 [![Build Status](https://travis-ci.org/teamreflex/DiscordPHP.svg?branch=master)](https://travis-ci.org/teamreflex/DiscordPHP) [![Discord Chat](https://img.shields.io/badge/chat-Discord%20API-blue.svg)](https://discord.gg/0SBTUU1wZTX4Mjwn) [![PHP Discorders](https://img.shields.io/badge/chat-PHP%20Discord-blue.svg)](https://discord.gg/0duG4FF1ElFGUFVq)
 
-A wrapper for the official [Discord](https://discordapp.com) REST, gateway and voice APIs.
+https://discordapp.com/oauth2/authorize?client_id=317679366064701440&scope=bot
 
 ## FAQ
 
