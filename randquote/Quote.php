@@ -2,11 +2,24 @@
 
 class Quote {
 
+    public function getCommands() { 
+
+        return '```http
+Lista komend:
+
+;;quote - generuje losowy cytat
+```';
+    }
+    
     public function getRandomQuote() { 
         
         $pageContent = $this->getHtmlContent('http://ecytaty.pl/losuj-cytat.html');
         
-        return  '`' . $this->getQuote($pageContent). ' ~ ' . $this->getAuthor($pageContent). '`';
+        return '```http
+' . $this->getRandomPhrase() . ':
+    
+' . $this->getQuote($pageContent) . '
+    ~' . $this->getAuthor($pageContent) . '```';
     }
     
     private function getHtmlContent($url) {
@@ -20,6 +33,12 @@ class Quote {
         return $pageContent;
     }
     
+    private function getRandomPhrase() {
+        
+        $phrases = ['Cytat na dziś','Myśl na dziś','Daje do myślenia','Przemyśl to:','Co o tym sądzisz','Hmm','Ciekawostki ze świata','Że co'];
+        
+        return $phrases[array_rand($phrases)];
+    }
     private function getQuote($pageContent) {
         
         preg_match_all("/\<p class\=\"tresc\"\>(.*?)\<\/p\>/",$pageContent,$rawQuote);     

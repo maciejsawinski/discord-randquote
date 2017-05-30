@@ -38,8 +38,9 @@ $discord->on('ready', function ($discord) {
 
         if ($message->content == ';;commands') {
             
-            $channel->sendMessage('Lista komend: ;;quote - losowy cytat')->then(function ($message) {
-                echo "The message was sent!", PHP_EOL;
+            $quote = new Quote;
+            $channel->sendMessage($quote->getCommands())->then(function ($message) {
+                echo "The message was sent", PHP_EOL;
             })->otherwise(function ($e) {
                 echo "There was an error sending the message: {$e->getMessage()}", PHP_EOL;
                 echo $e->getTraceAsString() . PHP_EOL;
@@ -47,16 +48,14 @@ $discord->on('ready', function ($discord) {
         }
         elseif ($message->content == ';;quote') {
             
-            $qoute = new Quote;
-            $channel->sendMessage($qoute->getRandomQuote())->then(function ($message) {
-                echo "The message was sent!", PHP_EOL;
+            $quote = new Quote;
+            $channel->sendMessage($quote->getRandomQuote())->then(function ($message) {
+                echo "The message was sent", PHP_EOL;
             })->otherwise(function ($e) {
                 echo "There was an error sending the message: {$e->getMessage()}", PHP_EOL;
                 echo $e->getTraceAsString() . PHP_EOL;
             });
         }
-        
-        echo "Recieved a message from {$message->author->username}: {$message->content}", PHP_EOL;
     });
 });
 
