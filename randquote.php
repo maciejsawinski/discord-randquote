@@ -56,6 +56,16 @@ $discord->on('ready', function ($discord) {
                 echo $e->getTraceAsString() . PHP_EOL;
             });
         }
+        elseif ($message->content == ';;info') {
+            
+            $quote = new Quote;
+            $channel->sendMessage($quote->getInfo())->then(function ($message) {
+                echo "The message was sent", PHP_EOL;
+            })->otherwise(function ($e) {
+                echo "There was an error sending the message: {$e->getMessage()}", PHP_EOL;
+                echo $e->getTraceAsString() . PHP_EOL;
+            });
+        }
     });
 });
 

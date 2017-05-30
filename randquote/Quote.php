@@ -8,6 +8,18 @@ class Quote {
 Lista komend:
 
 ;;quote - generuje losowy cytat
+
+;;info - informacje o projekcie
+```';
+    }
+    
+        public function getInfo() { 
+
+        return '```http
+Random Quote Bot for Discord
+
+GitHub - https://github.com/maciejsawinski/discord-randquote
+Copyright (c) 2017 Maciej Sawiński
 ```';
     }
     
@@ -35,7 +47,7 @@ Lista komend:
     
     private function getRandomPhrase() {
         
-        $phrases = ['Cytat na dziś','Myśl na dziś','Daje do myślenia','Przemyśl to:','Co o tym sądzisz','Hmm','Ciekawostki ze świata','Że co'];
+        $phrases = ['Cytat na dziś','Myśl na dziś','Daje do myślenia','Przemyśl to:','Co o tym sądzisz','Hmm','Ciekawostki ze świata','Czy zgadzasz się z tym','Skłania do dyskusji'];
         
         return $phrases[array_rand($phrases)];
     }
