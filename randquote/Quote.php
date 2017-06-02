@@ -13,7 +13,7 @@ Lista komend:
 ```';
     }
     
-        public function getInfo() { 
+    public function getInfo() { 
 
         return '```http
 Random Quote Bot for Discord
@@ -47,7 +47,7 @@ Copyright (c) 2017 Maciej Sawiński
     
     private function getRandomPhrase() {
         
-        $phrases = ['Cytat na dziś','Myśl na dziś','Daje do myślenia','Przemyśl to:','Co o tym sądzisz','Hmm','Ciekawostki ze świata','Czy zgadzasz się z tym','Skłania do dyskusji'];
+        $phrases = ['Cytat na dziś','Myśl na dziś','Daje do myślenia','Przemyśl to','Co o tym sądzisz','Hmm','Ciekawostki ze świata','Czy zgadzasz się z tym','Skłania do dyskusji','Tylko nie Paulo Coelho'];
         
         return $phrases[array_rand($phrases)];
     }
