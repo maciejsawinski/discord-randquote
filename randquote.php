@@ -44,6 +44,8 @@ $discord->on('ready', function ($discord) {
             })->otherwise(function ($e) {
                 echo "There was an error sending the message: {$e->getMessage()}", PHP_EOL;
                 echo $e->getTraceAsString() . PHP_EOL;
+
+                return;
             });
         }
         elseif ($message->content == ';;quote') {
@@ -54,6 +56,8 @@ $discord->on('ready', function ($discord) {
             })->otherwise(function ($e) {
                 echo "There was an error sending the message: {$e->getMessage()}", PHP_EOL;
                 echo $e->getTraceAsString() . PHP_EOL;
+
+                return;
             });
         }
         elseif ($message->content == ';;info') {
@@ -64,6 +68,8 @@ $discord->on('ready', function ($discord) {
             })->otherwise(function ($e) {
                 echo "There was an error sending the message: {$e->getMessage()}", PHP_EOL;
                 echo $e->getTraceAsString() . PHP_EOL;
+
+                return;
             });
         }
     });
