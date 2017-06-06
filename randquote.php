@@ -1,6 +1,6 @@
 <?php
 
-ini_set('memory_limit', '200M');
+ini_set('memory_limit', '-1');
 
 use Discord\Discord;
 use Discord\Cache\Cache;
