@@ -1,6 +1,4 @@
-/vendor
 composer.lock
 test*.php
 /randquote/Config.php
-/nbproject
 !/composer.lock
