@@ -1,3 +1,5 @@
+Not working because of DiscordPHP being abandoned.
+
 Random Quote Bot for Discord
 ====
 
